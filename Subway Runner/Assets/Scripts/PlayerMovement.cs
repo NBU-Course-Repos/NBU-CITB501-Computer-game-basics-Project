@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float m_Speed = 5;
     Rigidbody m_Rigidbody;
     private float m_Thrust = 9f;
 
@@ -14,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void MoveForward(){
-        transform.Translate(Vector3.forward * 5 * Time.deltaTime);
+        transform.Translate(Vector3.forward * m_Speed * Time.deltaTime);
     }
 
     // Update is called once per frame
