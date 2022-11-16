@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    private float m_Thrust = 9f;
-    Rigidbody m_Rigidbody;
+    private float _mThrust = 9f;
+    Rigidbody _mRigidbody;
     
     void Awake()
     {
-         m_Rigidbody = GetComponent<Rigidbody>();
+         _mRigidbody = GetComponent<Rigidbody>();
     }
 
     private void MoveForward(){
@@ -29,7 +29,7 @@ public class CameraMovement : MonoBehaviour
             transform.Translate(new Vector3(3.2f,0,0));
         }
         if ( Input.GetKeyDown(KeyCode.UpArrow)||Input.GetKeyDown(KeyCode.Space)){
-            m_Rigidbody.AddForce(transform.up * m_Thrust, ForceMode.Impulse);
+            _mRigidbody.AddForce(transform.up * _mThrust, ForceMode.Impulse);
         }
     }
 }

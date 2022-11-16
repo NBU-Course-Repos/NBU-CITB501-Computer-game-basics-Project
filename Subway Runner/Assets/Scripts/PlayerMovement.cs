@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float m_Speed = 5;
-    Rigidbody m_Rigidbody;
-    private float m_Thrust = 9f;
+    [FormerlySerializedAs("m_Speed")] public float mSpeed = 5;
+    Rigidbody _mRigidbody;
+    private float _mThrust = 9f;
 
     // Start is called before the first frame update
     void Awake()
     {
-         m_Rigidbody = GetComponent<Rigidbody>();
+         _mRigidbody = GetComponent<Rigidbody>();
     }
 
     private void MoveForward(){
-        transform.Translate(Vector3.forward * m_Speed * Time.deltaTime);
+        transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
     }
 
     // Update is called once per frame
@@ -33,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
                        //m_Rigidbody.AddForce(m_Speed* Time.deltaTime,0,0, ForceMode.Acceleration);
         }
         if ( Input.GetKeyDown(KeyCode.UpArrow)||Input.GetKeyDown(KeyCode.Space)){
-            m_Rigidbody.AddForce(transform.up * m_Thrust, ForceMode.VelocityChange);
+            _mRigidbody.AddForce(transform.up * _mThrust, ForceMode.VelocityChange);
         }
     }
 }
