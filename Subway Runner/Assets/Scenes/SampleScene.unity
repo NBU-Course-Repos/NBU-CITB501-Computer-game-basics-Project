@@ -350,6 +350,7 @@ MonoBehaviour:
   - {fileID: 5391154883501683369, guid: 5afcac86223889d44a47f91671d2130e, type: 3}
   player: {fileID: 1597900991}
   starterTile: {fileID: 5391154883501683369, guid: 5afcac86223889d44a47f91671d2130e, type: 3}
+  PRECoin: {fileID: 2886144740668888187, guid: b97c26b0bdf91c846926b9e2a1bda7bb, type: 3}
 --- !u!1 &1597900991
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +365,7 @@ GameObject:
   - component: {fileID: 1597900997}
   - component: {fileID: 1597900998}
   - component: {fileID: 1597900999}
+  - component: {fileID: 1597901000}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -445,7 +447,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597900991}
   serializedVersion: 2
-  m_Mass: 3
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -478,4 +480,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68cdd68c0b55727439327935dbbc665f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Speed: 15
+  mSpeed: 15
+--- !u!114 &1597901000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597900991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4b0672a63fbf145947b6cd177ed4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsCollected: 0
